@@ -1,0 +1,22 @@
+{
+  "name": "different_projects",
+  "version": "1.0.0",
+  "description": "different projects for experience",
+  "main": "index.js",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakharovda95/js-projects_for_experience.git"
+  },
+  "author": "zakharovda95",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakharovda95/js-projects_for_experience/issues"
+  },
+  "homepage": "https://github.com/zakharovda95/js-projects_for_experience#readme"
+}
