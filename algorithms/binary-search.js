@@ -9,22 +9,23 @@ const value = 862;
 
 function binarySearch(array, value) {
     let count = 0;
-    let min = array[0];
-    let max = array.at(-1);
+    let min = 0;
+    let max = array.length;
+    let mid;
     while (min <= max) {
-        const middle = Math.floor((min + max) / 2);
-        let result = ARRAY[middle]
+        mid = Math.round((min + max) / 2);
+        let result = ARRAY[mid]
         if (result === value) {
             count++
-            return {res: middle, count}
+            return {val: result, index: mid, count}
         }
         if (result < value) {
             count++
-            min = middle - 1
+            min = mid - 1
         }
         if (result > value) {
             count++
-            max = middle + 1
+            max = mid + 1
         }
     }
     return 'Not found!'
@@ -33,5 +34,5 @@ function binarySearch(array, value) {
 
 const result = binarySearch(ARRAY, value);
 
-const {res, count} = result
-console.log(res, count);
+const {val, index, count} = result
+console.log(val, index, count);
