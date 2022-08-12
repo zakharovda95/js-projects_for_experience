@@ -5,16 +5,17 @@ for (let i = 1; i <= 1000; i++) {
     ARRAY.push(i);
 }
 
-const value = 862;
+const target = 863;
 
 function binarySearch(array, value) {
     let count = 0;
     let min = 0;
     let max = array.length;
     let mid;
+    const sortedArr = array.sort()
     while (min <= max) {
         mid = Math.round((min + max) / 2);
-        let result = ARRAY[mid]
+        let result = sortedArr[mid]
         if (result === value) {
             count++
             return {val: result, index: mid, count}
@@ -32,7 +33,7 @@ function binarySearch(array, value) {
 }
 
 
-const result = binarySearch(ARRAY, value);
+const result = binarySearch(ARRAY, target);
 
 const {val, index, count} = result
 console.log(val, index, count);
